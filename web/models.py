@@ -9,3 +9,5 @@ class attributes(models.Model):
     create_time = models.DateTimeField()
     modified_time = models.DateTimeField()
     access_time = models.DateTimeField()
+    def __unicode__(self):
+        return "{}/{} - {}".format(self.path, self.file_name, self.moified_time)
